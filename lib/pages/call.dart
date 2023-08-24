@@ -22,7 +22,7 @@ class _CallPageState extends State<CallPage> {
         appId: appId,
         channelName: widget.channelName!,
         tempToken: token,
-        uid: 0,
+        uid: 1,
       ),
     );
     initAgora();
