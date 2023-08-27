@@ -1,6 +1,5 @@
 import 'dart:developer';
-
-import 'package:agora_rtc/pages/call.dart';
+import 'package:agora_rtc/pages/calling_page.dart';
 import 'package:agora_rtc_engine/agora_rtc_engine.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -83,7 +82,7 @@ class _IndexPageState extends State<IndexPage> {
     if(_channelController.text.isNotEmpty) {
       await handelCameraAndMic(Permission.camera);
       await handelCameraAndMic(Permission.microphone);
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>CallPage(channelName: _channelController.text,clientRoleType: _role,)));
+      // Navigator.push(context, MaterialPageRoute(builder: (context)=>CallingPage(channelName: _channelController.text,clientRoleType: ClientRoleType.clientRoleBroadcaster,)));
     }
   }
 
