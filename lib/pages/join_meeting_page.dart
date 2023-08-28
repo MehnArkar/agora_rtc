@@ -31,7 +31,6 @@ class _JoinMeetingPageState extends State<JoinMeetingPage> {
                       labelText: 'Meeting ID',
                       border: OutlineInputBorder()
                   ),
-
                 ),
                 const SizedBox(height: 15,),
                 TextField(
@@ -58,7 +57,7 @@ class _JoinMeetingPageState extends State<JoinMeetingPage> {
                           isLoading = true;
                         });
 
-                        String token = await getToken(channelId, false, int.parse(userId), const Duration(hours: 1));
+                        String token = await getToken(channelId, false, int.parse(userId), const Duration(seconds: 3600));
                         print(token);
 
                         setState(() {

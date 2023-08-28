@@ -58,7 +58,7 @@ class _CreateMeetingPageState extends State<CreateMeetingPage> {
                           isLoading = true;
                         });
 
-                        String token = await getToken(channelId, true, int.parse(userId), const Duration(hours: 1));
+                        String token = await getToken(channelId, true, int.parse(userId), const Duration(seconds: 3600));
                         print(token);
 
                         setState(() {
